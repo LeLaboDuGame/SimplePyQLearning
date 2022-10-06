@@ -1,0 +1,9 @@
+README.md
+setup.py
+SimplePyQLearning/__init__.py
+SimplePyQLearning/simplepyqlearning.py
+simplepyqlearning.egg-info/PKG-INFO
+simplepyqlearning.egg-info/SOURCES.txt
+simplepyqlearning.egg-info/dependency_links.txt
+simplepyqlearning.egg-info/requires.txt
+simplepyqlearning.egg-info/top_level.txt
