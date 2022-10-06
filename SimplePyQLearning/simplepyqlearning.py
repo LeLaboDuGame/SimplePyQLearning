@@ -9,7 +9,8 @@ color2 = '\033[94m'
 color3 = '\033[0m'
 
 print(
-    f"{color1}You use the library SimplePyQLearning !\n{color2}Credit: LeLaboDuGame on Twitch -> https://twitch.tv/LeLaboDuGame{color3}")
+    f"{color1}You use the library SimplePyQLearning !\n{color2}Credit: LeLaboDuGame on Twitch -> "
+    f"https://twitch.tv/LeLaboDuGame{color3}")
 
 
 class QLearning:
