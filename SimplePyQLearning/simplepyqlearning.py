@@ -13,6 +13,25 @@ print(
     f"https://twitch.tv/LeLaboDuGame{color3}")
 
 
+
+def something(self, reward, state, action):
+    """
+        :return: reward, action, state
+        :param self: return all variables
+        :param reward: return the reward
+        :param action: return the action
+        :param state: return the state
+
+
+    Exemple:
+        print(self.reward)
+
+        self.reward = 1
+        return reward, action, state
+    """
+    return reward, state, action
+
+
 class QLearning:
     """
     SIMPLEPYQLEARNING
@@ -128,7 +147,7 @@ class QLearning:
                 map[tuple(s)] = "P"
         return map
 
-    def train(self, episode):
+    def train(self, episode, custom_function=something):
 
         for i in tqdm(range(episode)):
             if self.spawn[1]:
@@ -153,6 +172,7 @@ class QLearning:
                 old_s = s
                 s = self.get_next_state(s, a)
                 r = self.map[tuple(s)]
+                r, s, a = custom_function(self, r, s, a)
                 old_q_value = self.q_value[tuple(old_s)][a]
                 temporal_difference = r + (
                         self.discount_factor * np.max(self.q_value[tuple(s)])) - old_q_value
