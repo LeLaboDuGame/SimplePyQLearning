@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='simplepyqlearning',
-    version='1.1.2',
+    version='1.2.0',
     packages=setuptools.find_packages(),
     url='https://github.com/AdrienDumontet/SimplePyAI',
     license='Let the package like is it ',
